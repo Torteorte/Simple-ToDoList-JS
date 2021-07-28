@@ -1,0 +1,138 @@
+* {
+   margin : 0px;
+   padding: 0px;
+}
+
+body {
+   background-color: white;
+   margin          : 100px;
+}
+
+.container {
+   width             : 400px;
+   margin            : auto;
+   padding-bottom    : 10px;
+   -webkit-box-shadow: 0px 10px 30px 0px rgba(34, 60, 80, 0.15);
+   -moz-box-shadow   : 0px 10px 30px 0px rgba(34, 60, 80, 0.15);
+   box-shadow        : 0px 10px 30px 0px rgba(34, 60, 80, 0.15);
+
+}
+
+header {
+   background-color       : rgb(223, 70, 70);
+   color                  : white;
+   border-top-left-radius : 5px;
+   border-top-right-radius: 5px;
+
+   p {
+      padding    : 15px 5px;
+      font-size  : 20px;
+      margin-left: 20px;
+   }
+}
+
+.input-field {
+   display              : grid;
+   grid-template-columns: 15fr 2fr;
+   padding              : 10px 0;
+   align-items          : center;
+   margin               : 5px 0;
+
+   input {
+      box-sizing  : border-box;
+      width       : 100%;
+      border      : none;
+      padding     : 10px;
+      padding-left: 20px;
+      outline     : none;
+      font-size   : 16px;
+   }
+
+   .svg-circleplus {
+      height      : 40px;
+      stroke      : lightgray;
+      margin-right: 10px;
+
+      &:hover {
+         stroke   : rgb(112, 112, 112);
+         transform: scale(1.2);
+      }
+
+      &:active {
+         stroke   : rgb(136, 136, 136);
+         transform: scale(1);
+      }
+   }
+
+}
+
+.items-to-do {
+
+   .item {
+      padding-top   : 20px;
+      padding-bottom: 20px;
+      font-size     : 18px;
+      display       : flex;
+      flex-direction: row;
+      align-items   : center;
+
+      &.done {
+         text-decoration: line-through;
+
+         button {
+            background-image: url("./img/Check.svg");
+            background-color: lightpink;
+         }
+      }
+
+      &:first-child {
+         padding-top: 10px
+      }
+
+
+
+      &:nth-child(2n) {
+         background-color: rgb(245, 245, 245);
+      }
+
+      button {
+         content         : "";
+         width           : 25px;
+         height          : 25px;
+         margin-left     : 15px;
+         border          : solid 2px lightpink;
+         border-radius   : 50%;
+         background-color: white;
+
+         &:hover {
+            background-image: url("./Check.svg");
+            background-color: lightpink;
+            opacity         : 0.5;
+         }
+
+         &:active {
+            background-image: url("./Check.svg");
+            background-color: lightpink;
+            opacity         : 1;
+         }
+      }
+
+      p {
+         margin-left: 15px;
+      }
+
+      svg {
+         margin-left : auto;
+         margin-right: 20px;
+         color       : darkgrey;
+
+         &:hover {
+            transform: scale(1.1);
+         }
+
+         &:active {
+            transform: scale(1);
+         }
+      }
+   }
+}
