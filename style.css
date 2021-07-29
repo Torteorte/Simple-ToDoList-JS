@@ -70,9 +70,6 @@ header p {
   background-image: url("img/Check.svg");
   background-color: lightpink;
 }
-.items-to-do .item.checked button:hover {
-  background-image: none;
-}
 .items-to-do .item.checked button:active {
   background-image: none;
 }
@@ -92,8 +89,6 @@ header p {
   background-color: white;
 }
 .items-to-do .item button:hover {
-  background-image: url("img/Check.svg");
-  background-color: lightpink;
   opacity: 0.5;
 }
 .items-to-do .item button:active {
