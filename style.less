@@ -4,8 +4,8 @@
 }
 
 body {
+   margin-top      : 100px;
    background-color: white;
-   margin          : 100px;
 }
 
 .container {
@@ -25,33 +25,35 @@ header {
    border-top-right-radius: 5px;
 
    p {
+      margin-left: 20px;
       padding    : 15px 5px;
       font-size  : 20px;
-      margin-left: 20px;
    }
 }
 
 .input-field {
    display              : grid;
    grid-template-columns: 15fr 2fr;
-   padding              : 10px 0;
    align-items          : center;
    margin               : 5px 0;
+   padding              : 10px 0;
+
+
 
    input {
       box-sizing  : border-box;
       width       : 100%;
-      border      : none;
       padding     : 10px;
       padding-left: 20px;
+      border      : none;
       outline     : none;
       font-size   : 16px;
    }
 
    .svg-circleplus {
       height      : 40px;
-      stroke      : lightgray;
       margin-right: 10px;
+      stroke      : lightgray;
 
       &:hover {
          stroke   : rgb(112, 112, 112);
@@ -68,14 +70,14 @@ header {
 .items-to-do {
 
    .item {
-      padding-top   : 20px;
-      padding-bottom: 20px;
-      font-size     : 18px;
       display       : flex;
       flex-direction: row;
       align-items   : center;
+      padding-top   : 20px;
+      padding-bottom: 20px;
+      font-size     : 18px;
 
-      &.done {
+      &.checked {
          text-decoration: line-through;
 
          button {
@@ -127,10 +129,10 @@ header {
       }
 
       img {
-         margin-left : auto;
-         margin-right: 15px;
          height      : 25px;
          width       : 25px;
+         margin-left : auto;
+         margin-right: 15px;
          opacity     : 0.75;
 
          &:hover {

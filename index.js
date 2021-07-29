@@ -3,34 +3,34 @@ const newTask = inputField.querySelector("#new-task")
 const addNewTask = inputField.querySelector("#addNewTask")
 const itemsToDo = document.querySelector(".items-to-do")
 
-const clickAddNewTask = () => {
+const onAddNewTask = () => {
    if (!newTask.value) return
-   let newTodo = document.createElement('div');
-   newTodo.classList.add('item')
-   newTodo.insertAdjacentHTML('afterbegin', `
+   let newTodoItem = document.createElement('div');
+   newTodoItem.classList.add('item')
+   newTodoItem.insertAdjacentHTML('afterbegin', `
          <button class="check" id="check"></button>
          <p>${newTask.value}</p>
          <img class="image-bucket" src="./img/trash.png" alt="delete">
    `)
-   itemsToDo.append(newTodo)
+   itemsToDo.append(newTodoItem)
    newTask.value = ""
 }
 
-addNewTask.addEventListener("click", clickAddNewTask)
+addNewTask.addEventListener("click", onAddNewTask)
 
-const removeItem = (event) => {
-   if (event.target.classList != 'image-bucket') return
-   event.target.closest('.item').remove();
+const removeItem = (e) => {
+   if (e.target.classList != 'image-bucket') return
+   e.target.closest('.item').remove();
 }
 
-const toggleСheck = (event) => {
-   if (event.target.className != 'check') return
-   event.target.closest('.item').classList.toggle("done")
+const toggleСhecked = (e) => {
+   if (e.target.className != 'check') return
+   e.target.closest('.item').classList.toggle("checked")
 }
 
-const manyClickFunctions = (event) => {
-   removeItem(event)
-   toggleСheck(event)
+const combineOnclicks = (e) => {
+   removeItem(e)
+   toggleСhecked(e)
 }
 
-itemsToDo.addEventListener("click", manyClickFunctions)
+itemsToDo.addEventListener("click", combineOnclicks)
